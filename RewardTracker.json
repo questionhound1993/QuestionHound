@@ -1,0 +1,88 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.28;
+
+contract RewardTracker {
+    struct RewardInfo {
+        address wallet;
+        uint256 rewardsEarned;
+    }
+
+    RewardInfo[] public topEarners;
+    address public latestBuyer;
+    address public lastRewardReceiver;
+    address public secondLastRewardReceiver;
+
+    // Keep track of rewards earned by each wallet
+    mapping(address => uint256) public walletRewards;
+
+    // Event to track changes
+    event TopEarnersUpdated(address[] top10);
+    event LatestBuyerUpdated(address latestBuyer);
+    event RewardReceiversUpdated(address last, address secondLast);
+
+    constructor() {
+        topEarners.push(RewardInfo(address(0), 0)); // Initializing top earners
+    }
+
+    // Function to update the reward receivers list
+    function updateRewardReceivers(address newRewardReceiver) external {
+        secondLastRewardReceiver = lastRewardReceiver;
+        lastRewardReceiver = newRewardReceiver;
+        emit RewardReceiversUpdated(lastRewardReceiver, secondLastRewardReceiver);
+    }
+
+    // Function to update the latest buyer
+    function updateLatestBuyer(address _latestBuyer) external {
+        latestBuyer = _latestBuyer;
+        emit LatestBuyerUpdated(latestBuyer);
+    }
+
+    // Function to update the rewards for a wallet
+    function updateRewards(address wallet, uint256 rewardAmount) external {
+        walletRewards[wallet] += rewardAmount;
+        _updateTopEarners(wallet);
+    }
+
+    // Internal function to update the top earners
+    function _updateTopEarners(address wallet) internal {
+        bool updated = false;
+
+        // Check if wallet is already in the top earners list
+        for (uint256 i = 0; i < topEarners.length; i++) {
+            if (topEarners[i].wallet == wallet) {
+                topEarners[i].rewardsEarned = walletRewards[wallet];
+                updated = true;
+                break;
+            }
+        }
+
+        // If not found, add to the list
+        if (!updated && topEarners.length < 10) {
+            topEarners.push(RewardInfo(wallet, walletRewards[wallet]));
+        } else if (!updated) {
+            // If the list is full, replace the lowest earner if the new one has earned more
+            uint256 lowestIndex = 0;
+            for (uint256 i = 1; i < topEarners.length; i++) {
+                if (topEarners[i].rewardsEarned < topEarners[lowestIndex].rewardsEarned) {
+                    lowestIndex = i;
+                }
+            }
+
+            if (walletRewards[wallet] > topEarners[lowestIndex].rewardsEarned) {
+                topEarners[lowestIndex] = RewardInfo(wallet, walletRewards[wallet]);
+            }
+        }
+
+        // Emit event after updating top earners
+        emit TopEarnersUpdated(_getTopEarners());
+    }
+
+    // Helper function to return the top earners addresses
+    function _getTopEarners() internal view returns (address[] memory) {
+        address[] memory top10 = new address[](topEarners.length);
+        for (uint256 i = 0; i < topEarners.length; i++) {
+            top10[i] = topEarners[i].wallet;
+        }
+        return top10;
+    }
+}
