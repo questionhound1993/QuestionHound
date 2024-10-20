@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Question Hound - This is Fine, the meme token that embodies the resilience of the crypto community during bear markets.">
+    <title>Question Hound - This is Fine | Meme Token</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://cimg.co/wp-content/uploads/2024/09/09162844/1725899324-red_optimized.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            color: black;
+        }
+
+        header {
+            background: rgba(255, 0, 0, 0.7);
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            height: auto;
+        }
+
+        #logo {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+        }
+
+        header p {
+            font-size: 1em;
+            margin: 5px 0;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+            padding: 8px;
+            position: fixed;
+            top: 85px;
+            width: 100%;
+            z-index: 999;
+        }
+
+        nav a {
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        nav a:hover {
+            background-color: #ff6f61;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+        }
+
+        .section {
+            padding: 140px 20px 60px;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.8);
+            margin: 0;
+        }
+
+        h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.1em;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        ul, ol {
+            list-style-position: inside;
+            padding: 0;
+            margin-bottom: 30px;
+        }
+
+        ul li, ol li {
+            font-size: 1.1em;
+            margin: 10px 0;
+        }
+
+        button {
+            background-color: #ff6f61;
+            border: none;
+            color: white;
+            padding: 12px 28px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 5px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            font-size: 0.8em;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.6em;
+            }
+
+            nav a {
+                padding: 8px 10px;
+            }
+
+            .section {
+                padding: 170px 10px 40px;
+            }
+
+            button {
+                padding: 10px 24px;
+            }
+
+            #logo {
+                width: 50px;
+                height: 50px;
+            }
+
+            nav {
+                top: 100px;
+            }
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js/dist/web3.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <img id="logo" src="https://miro.medium.com/v2/format:webp/0*ZjYSm_q36J4KChdn" alt="Question Hound Logo">
+        <div>
+            <h1>Question Hound <i>($QHND)</i> - (This is Fine)</h1>
+            <p>The Meme Token for Bear Market Survivors</p>
+        </div>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="#about">About</a>
+        <a href="#features">Features</a>
+        <a href="#buy">How to Buy</a>
+        <a href="#community">Community</a>
+    </nav>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <h2>About Question Hound <i><b>($QHND)</b></i></h2>
+        <p><strong>Question Hound ($QHND) - This is Fine</strong> is a meme token built for those who embrace the chaos of bear markets. With <strong>100 million tokens</strong> and a <strong>5% tax on each transaction</strong>, $QHND is designed to reward players who thrive on timing and strategy.</p>
+        <p>Here’s how the reward system works:</p>
+        <ul>
+            <li>Every transaction has a <strong>5% tax</strong>, with <strong>2% added to liquidity</strong> for market stability.</li>
+            <li>The remaining <strong>3% is redistributed</strong> to active traders:</li>
+            <ul>
+                <li><strong>2%</strong> goes to the <strong>last buyer/seller</strong> before the transaction.</li>
+                <li><strong>1%</strong> goes to the <strong>buyer/seller before the last one</strong>.</li>
+            </ul>
+            <li>The reward depends on the next transaction: If it’s a <strong>buy</strong>, you’ll earn <strong>BNB</strong>. If it’s a <strong>sell</strong>, you’ll get <strong>more $QHND tokens</strong>!</li>
+        </ul>
+        <p>This creates an exciting game where timing is key. You never know when a whale might make a move—if you trade right before them, you’re in for a sweet reward!</p>
+        <p><strong>The token for those who laugh through the flames. Get in, trade, and stay sharp—fortune favors the bold!</strong></p>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="section">
+<!-- Question Hound Logo -->
+<div style="text-align:center;">
+    <img id="qhnd-logo" src="https://miro.medium.com/v2/format:webp/0*ZjYSm_q36J4KChdn" alt="Question Hound Logo" style="width:100px; height:100px; border-radius:50%; margin-bottom:20px;">
+</div>
+
+<!-- BscScan, CoinMarketCap, and CoinGecko Logos with Links -->
+<div style="text-align:center; margin-bottom:40px;">
+    <a href="https://bscscan.com" target="_blank">
+        <img src="https://cdn-1.webcatalog.io/catalog/bscscan/bscscan-icon-filled-256.webp?v=1714773478341" style="width:60px; height:60px; border-radius:50%; margin-right:20px;">
+    </a>
+    <a href="https://coinmarketcap.com" target="_blank">
+        <img src="https://cdn-1.webcatalog.io/catalog/coinmarketcap/coinmarketcap-icon-filled-128.webp?v=1714773065187" alt="CoinMarketCap" style="width:60px; height:60px; border-radius:50%; margin-right:20px;">
+    </a>
+    <a href="https://coingecko.com" target="_blank">
+        <img src="https://cdn-1.webcatalog.io/catalog/coingecko/coingecko-icon-filled-128.webp?v=1714773009818" alt="CoinGecko" style="width:60px; height:60px; border-radius:50%;">
+    </a>
+
+        <h2>
+</div>Key Features</h2>
+        <ul>
+            <li><strong>100 Million Total Supply</strong> – Designed for scarcity and high demand.</li>
+            <li><strong>5% Transaction Tax</strong> – 2% added to liquidity, 3% rewarded to active traders.</li>
+            <li><strong>Dynamic Redistribution</strong> – The next transaction determines if you get <strong>BNB</strong> or <strong>$QHND tokens</strong>!</li>
+            <li><strong>Optimized for BNB Chain</strong> – Fast transactions with low gas fees.</li>
+            <li><strong>Meme-Driven, Community-Powered</strong> – Engage in contests, memes, and strategies to win rewards.</li>
+        </ul>
+    </section>
+
+    <!-- How to Buy Section -->
+    <section id="buy" class="section">
+        <h2>How to Buy Question Hound</h2>
+        <p>Follow these steps to get your paws on <strong>Question Hound - This is Fine</strong>:</p>
+        <ol>
+            <li>Download a crypto wallet like MetaMask or Trust Wallet.</li>
+            <li>Buy <strong>BNB</strong> to cover transaction fees on the BNB Chain.</li>
+            <li>Head to a decentralized exchange to swap <strong>BNB</strong> for <strong>$QHND tokens</strong>.</li>
+        </ol>
+        <button>Buy Question Hound Now</button>
+    </section>
+
+    <!-- Community Section -->
+    <section id="community" class="section">
+        <h2>Join Our Pack</h2>
+        <p>Don’t navigate the bear market alone. Join our community on Telegram and Twitter to stay up-to-date with the latest news, contests, and token updates.</p>
+        <button>Join on Telegram</button>
+        <button>Follow on Twitter</button>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        &copy; 2024 Question Hound. All rights reserved.
+    </footer>
+
+    <!-- Web3.js Script to Interact with Smart Contract -->
+    <script>
+        let web3;
+        let contract;
+        const contractAddress = 'YOUR_CONTRACT_ADDRESS'; // Replace with deployed contract address
+        const abi = /* Paste the ABI of RewardTracker contract here */;
+
+        // Initialize Web3.js and connect to MetaMask
+        async function init() {
+            if (window.ethereum) {
+                web3 = new Web3(window.ethereum);
+                await window.ethereum.enable(); // Request account access
+            } else {
+                alert("Please install MetaMask to use this feature.");
+            }
+            contract = new web3.eth.Contract(abi, contractAddress);
+        }
+
+        // Function to get latest buyer
+        async function getLatestBuyer() {
+            const latestBuyer = await contract.methods.latestBuyer().call();
+            console.log("Latest Buyer:", latestBuyer);
+        }
+
+        // Function to update latest buyer
+        async function updateLatestBuyer(address) {
+            const accounts = await web3.eth.getAccounts();
+            await contract.methods.updateLatestBuyer(address).send({ from: accounts[0] });
+            alert('Latest Buyer Updated');
+        }
+
+        // Function to update rewards for a wallet
+        async function updateRewards(wallet, amount) {
+            const accounts = await web3.eth.getAccounts();
+            await contract.methods.updateRewards(wallet, amount).send({ from: accounts[0] });
+            alert('Rewards Updated');
+        }
+
+        // Call init function when page loads
+        window.onload = init;
+    </script>
+</body>
+
+</html>
